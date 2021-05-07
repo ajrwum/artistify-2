@@ -37,8 +37,7 @@ One album is indeed performed by an artist and produced by a label (debatable :)
   - the Read is **provided**
   - code the Update form + routes
   - code the Delete route
-
-- **BONUS Artist**
+- Artist :
   - Link Artist model to Style with a ref (array of ObjectId)
   - Update the provided code to add style to CRUD Artist
 
