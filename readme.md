@@ -12,7 +12,7 @@ This group workshop will walk you through the steps to create a fullstack applic
 
 ---
 
-## Day II - More C.R.U.D and Collection references (end @ 13h00)
+## Day II - More C.R.U.D and Collection references (end @ 15h00)
 
 Today, we will continue the dashboard CRUD with an important addition.  
 We will introduce a new model : Album.  
