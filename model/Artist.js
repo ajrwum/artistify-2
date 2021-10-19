@@ -6,7 +6,7 @@ const artistSchema = new Schema(
     name: String,
     isBand: Boolean,
     description: String,
-    styles: [{ type: Schema.Types.ObjectId, ref: "style" }],
+    styles: [],
     picture: {
       type: String,
       default:
