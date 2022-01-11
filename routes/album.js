@@ -61,5 +61,19 @@ router.post("/", uploader.single("cover"), async (req, res, next) => {
 });
 
 // POST - update one album
+router.post("/:id",uploader.single("cover"),async (req,res,next)=> {
+  try{
+    const NewAlbumData ={...req.body}
+   if (req.file) NewAlbumData.cover=req.file.path;
+   else NewAlbumData.cover=existingValue;
+
+   await AlbumModel.findByIdAndUpdate(req.params.id,NewAlbumData);
+   res.redirect("/dashboard/album");
+   }
+  catch (e){
+    next(e);
+  }
+}
+)
 
 module.exports = router;
