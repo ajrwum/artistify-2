@@ -5,13 +5,15 @@ $ cd artistify-2
 $ npm i
 $ touch .env
 
-# set the .env file (you may pick one cloudinary account per group)
+# set the .env file 
 
-MONGO_URI = mongodb://localhost/artistify
-PORT = 5000
-CLOUDINARY_NAME = ?
-CLOUDINARY_KEY = ?
-CLOUDINARY_SECRET = ?
+you may pick one cloudinary account per group
+
+- MONGO_URI = mongodb://localhost/artistify
+- PORT = 5000
+- CLOUDINARY_NAME = ?
+- CLOUDINARY_KEY = ?
+- CLOUDINARY_SECRET = ?
 
 # seed the database
 
