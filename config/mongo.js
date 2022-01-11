@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const PORT = process.env.PORT || 4000;
 
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
@@ -7,7 +8,7 @@ mongoose.connect(process.env.MONGO_URI, {
 });
 
 mongoose.connection.on("connected", () =>
-  console.log("yay mongodb connected :)")
+  console.log(`yay mongodb connected :) http://127.0.0.1:${PORT}`)
 );
 
 mongoose.connection.on("error", () =>

@@ -25,7 +25,24 @@ router.get("/create", async (req, res, next) => {
   res.render("dashboard/albumCreate", { artists, labels });
 });
 
-// GET - update one album (form)
+// GET - update one album (form) // getting id first
+router.get("/update/:id", uploader.single("cover"), async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const album = await AlbumModel.findById(id)
+      .populate("artist")
+      .populate("label");
+    const artists = await ArtistModel.find();
+    const labels = await LabelModel.find();
+    res.render("dashboard/albumUpdate", {
+      album,
+      artists,
+      labels,
+    });
+  } catch (error) {
+    next(error);
+  }
+});
 
 // GET - delete one album
 

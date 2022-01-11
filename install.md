@@ -21,7 +21,6 @@ $ npm run seed:label
 $ npm run seed:style  
 $ npm run seed:artist
 
-
 # launch the project
 
 $ npm run dev
